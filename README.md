@@ -1,8 +1,19 @@
 "# learning"
 
+TO CREATE NEW GIT REPOSITORY
+mkdir nameofnewdirectory (this is to create a new directory)
+cd nameofnewdirectory (to get into the new directory)
+git init (to make the current directory a github repository)
+
+TO SET UP A REMOTE REPOSITORY
+go to github and create a new repository
+go to your repository directory in the command line the type
+git remote add origin pastehereyournewrepositoryurl
+
+
 GIT COMMANDS
 Everytime you start coding do this
-git pull origin
+git pull origin branchname
 
 When adding/updating code
 git add nameoffile.extensionname (to add a single file)
@@ -14,23 +25,24 @@ git push origin
 TO ADD NEW BRANCH
 git checkout -b nameofnewbranch
 
+ACCESS A BRANCH
+git checkout nameofbranch
 
-…or create a new repository on the command line
-echo "# learningprojects" >> README.md
-git init
-git add README.md
-git commit -m "first commit"
-git branch -M main
-git remote add origin https://github.com/shaherfaheem/learningprojects.git
-git push -u origin main
+PUSHING ANOTHER BRANCH
+git checkout nameofbranch
+git push origin nameofbranch
 
-
-…or push an existing repository from the command line
-git remote add origin https://github.com/shaherfaheem/learningprojects.git
-git branch -M main
-git push -u origin main
+TO MERGE files from a branch to another branch
+git checkout nameofbranchtoupdate
+git merge nameofsourcebranch
 
 
-…or import code from another repository
-You can initialize this repository with code from a Subversion, Mercurial, or TFS project.
+TO FIX GIT PUSH CONFLICT
+git pull origin branchname
+
+IF AUTOMATIC MERGE FAILED
+fix conflicts first in the file then type
+git add nameoffile.extensionname
+git commit -m "message"
+git push
 
